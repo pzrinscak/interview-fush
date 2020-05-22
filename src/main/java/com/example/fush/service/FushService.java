@@ -26,10 +26,14 @@ public class FushService {
         return returnValue;
     }
 
-    public boolean checkForDuplicates() {
+    public boolean checkForDuplicatesFromDb() {
         final Iterable<Fush> allFushes = fushRepository.findAll();
         final Iterable<Fush> allFushes2 = fushRepository.findAll();
 
+        return checkForDuplicates(allFushes, allFushes2);
+    }
+
+    public boolean checkForDuplicates(Iterable<Fush> allFushes, Iterable<Fush> allFushes2) {
         boolean hasDuplicates = false;
         for (final Fush fush : allFushes) {
             for (final Fush fush2 : allFushes2) {

@@ -14,6 +14,11 @@ public class Fush {
 
     private String name;
 
+    public Fush(Long id, String name) {
+        this.id = id;
+        this.name = name;
+    }
+
     public Long getId() {
         return id;
     }
