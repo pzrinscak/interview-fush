@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Naslov</title>
+</head>
+<body>
+    <div>
+        <p>E ovo je tekst za kojeg zelim da se pokaze.</p>
+    </div>
+
+    <div>
+        <form th:action="@{/fush/get-one}" th:object="${fushDto}" method="post">
+            <div>
+                <input type="text" th:field="*{id}" />
+            </div>
+            <div>
+                <input type="submit" value="Find one" />
+            </div>
+        </form>
+    </div>
+
+</body>
+</html>

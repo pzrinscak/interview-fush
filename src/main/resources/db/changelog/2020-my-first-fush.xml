@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<databaseChangeLog
+        xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog
+                      http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.8.xsd">
+
+    <changeSet id="2020-my-first-fush" author="djurina">
+
+        <createTable tableName="fush">
+            <column autoIncrement="true" name="id" type="INT">
+                <constraints primaryKey="true" nullable="false"/>
+            </column>
+            <column name="name" type="VARCHAR(255)">
+                <constraints nullable="false"/>
+            </column>
+        </createTable>
+
+        <insert tableName="fush">
+            <column name="id" value="1"/>
+            <column name="name" value="name1"/>
+        </insert>
+        <insert tableName="fush">
+            <column name="id" value="2"/>
+            <column name="name" value="name2"/>
+        </insert>
+        <insert tableName="fush">
+            <column name="id" value="3"/>
+            <column name="name" value="name3"/>
+        </insert>
+        <insert tableName="fush">
+            <column name="id" value="4"/>
+            <column name="name" value="name4"/>
+        </insert>
+        <insert tableName="fush">
+            <column name="id" value="5"/>
+            <column name="name" value="name5"/>
+        </insert>
+
+    </changeSet>
+</databaseChangeLog>
